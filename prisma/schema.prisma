@@ -32,3 +32,10 @@ model users {
   email    String?   @db.VarChar(255)
   folders  folders[]
 }
+
+model Session {
+  id        String   @id
+  sid       String   @unique
+  data      String   @db.Text
+  expiresAt   DateTime
+}
